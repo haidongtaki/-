@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主页</title>
+    <link rel="stylesheet" href="../bootstrap-5.1.3-dist/css/bootstrap.min.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <script src="../bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/登录页面.css">
+    <link rel="stylesheet" href="css/主页.css">
+
+    <script src="主页.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- 头部导航栏 -->
+        <div class="row head">
+            <div class="col-xxl-4 head1 d-none d-xxl-block">
+
+            </div>
+            <div class="col-xxl-2 headimg"><img src="image/logo.png" alt="" height="38px"></div>
+            <div class="col-xxl-6 head2">
+
+                <span><button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal"
+                        style="color: #fff;">登录</button></span>
+                <span><a href="#">严选态度</a></span>
+                <span><a href="#">企业采购</a></span>
+                <span><a href="#">下载APP</a></span>
+                <span><a href="购物车.html">购物车</a></span>
+                <span><a href="个人订单.html">我的订单</a></span>
+            </div>
+
+        </div>
+        <!-- 固定顶部导航栏 -->
+        <div class="row">
+            <nav class="navbar fixed-top bg-body-tertiary nav col-12 d-none d-xxl-block">
+                <div class="container-fluid nav">
+                    <nav class="navbar navbar-expand-lg bg-body-tertiary nav">
+                        <div class="container-fluid">
+                            <span class="navbar-brand text-white" href="#"> 好的眼镜没那么贵!~</span>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <li><img class="logo" src="image/logo.png" alt="" height="38px"></li>
+                            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link active text-white" aria-current="page" href="#">主页 </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-white " href="#">企业采购</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-white" href="#">下载APP</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                                <path fill-rule="evenodd"
+                                                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                                            </svg>
+                                            我的
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li style="padding: .25rem 1rem;"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="16" height="16" fill="currentColor"
+                                                    class="bi bi-person-fill-add" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd"
+                                                        d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5a.5.5 0 0 0-1 0v1h-1a.5.5 0 0 0 0 1h1v1a.5.5 0 0 0 1 0v-1h1a.5.5 0 0 0 0-1h-1v-1Z" />
+                                                    <path
+                                                        d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-9 8c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4Z" />
+                                                </svg><button type="button" class="btn" data-bs-toggle="modal"
+                                                    data-bs-target="#myModal">
+                                                    登录
+                                                </button>
+                                            </li>
+                                            <li><a class="dropdown-item text-body" href="个人订单.html"><svg
+                                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-menu-button-wide-fill"
+                                                        viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M1.5 0A1.5 1.5 0 0 0 0 1.5v2A1.5 1.5 0 0 0 1.5 5h13A1.5 1.5 0 0 0 16 3.5v-2A1.5 1.5 0 0 0 14.5 0h-13zm1 2h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1 0-1zm9.927.427A.25.25 0 0 1 12.604 2h.792a.25.25 0 0 1 .177.427l-.396.396a.25.25 0 0 1-.354 0l-.396-.396zM0 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V8zm1 3v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2H1zm14-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2h14zM2 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z" />
+                                                    </svg> 我的订单</a></li>
+                                            <li><a class="dropdown-item text-body" href="购物车.html"><svg
+                                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                                    </svg> 购物车</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </nav>
+        </div>
+        <!-- 搜索框 -->
+        <div class=" row my-1">
+            <div id="box">
+                <p>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                    <button class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
+                    </button>
+                </div>
+
+                </p>
+                <ul id="conter"></ul>
+            </div>
+        </div>
+        <!-- 轮播 -->
+        <div class="row">
+            <div id="demo" class="carousel slide" data-bs-ride="carousel">
+                <!-- 指示符 -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                </div>
+                <!-- 轮播图片 -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://images.vsigo.cn/resources/202212160835918614_1000.jpg" class="d-block"
+                            style="width:100%">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.vsigo.cn/resources/2023427165223583533_1000.jpg" class="d-block"
+                            style="width:100%">
+                    </div>
+                </div>
+                <!-- 左右切换按钮 -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+        <!-- 商品分类 -->
+        <div class="row shangpinfenlei">
+
+            <span class="col-2"><a href="美瞳.html"><img
+                        src="https://images.vsigo.cn/resources/2023122312831535210_200.png" alt="">
+                </a>
+                <p>美瞳</p>
+            </span>
+            <span class="col-1"></span>
+            <span class="col-2"><a href="隐形眼镜.html"><img
+                        src="https://images.vsigo.cn/resources/202312231294774328_200.png" alt="">
+                </a>
+                <p>隐形眼镜</p>
+            </span>
+            <span class="col-1"></span>
+            <span class="col-2"><a href="护理液.html"><img
+                        src="https://images.vsigo.cn/resources/2023122312939326735_200.png" alt="">
+                </a>
+                <p>护理液</p>
+            </span>
+            <span class="col-1"></span>
+            <span class="col-2"><a href="太阳镜.html"><img
+                        src="https://images.vsigo.cn/resources/2023122313127471363_200.png" alt="">
+                </a>
+                <p>太阳镜</p>
+            </span>
+        </div>
+        <!-- 商品推荐 -->
+        <div class="row shangpintuijiandaohang">
+            <span><a class="text-body" href="#">猜你喜欢</a></span>
+        </div>
+        <div class="row">
+            <a href="商品详情.html">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="cardBorder card">
+                        <div class="main card-img-top" id="main">
+                            <div class="big card-img-top" id="big">
+                                <img class="card-img-top"
+                                    src="https://pic8.vsigo.cn/Products/contacts/210-210/20231212182456948.jpg">
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title my-2">【线条小狗联名上新】LaPeche拉拜诗告白魔方「小方盒」日抛系列彩色隐形眼镜10片装</h4>
+                                <div class="card-text d-flex justify-content-between my-2">
+                                    <span class="text-danger">￥99</span>
+                                    <span>广东广州</span>
+                                </div>
+                                <div class="my-2">
+                                    <a href="#" class="btn btn-outline-warning text-danger disabled"
+                                        style="width: 65px; height: 20px;font-size: 12px;padding: 0;">赠运费险</a>
+                                    <a href="#" class="btn btn-outline-warning text-danger disabled btn-sm">包邮</a>
+                                </div>
+                                <div class="text-muted my-2"> <img src="../作品/image/logo.png" alt="" height="20px">官方旗舰店
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </a>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <a href="商品详情.html">
+                    <div class="cardBorder card">
+
+                        <div class="main card-img-top" id="main">
+                            <div class="big card-img-top" id="big">
+                                <img class="card-img-top"
+                                    src="https://pic8.vsigo.cn/Products/contacts/210-210/202212611477398.jpg"
+                                    alt="Card image">
+
+                            </div>
+
+
+
+                            <div class="card-body">
+                                <h4 class="card-title my-2">【线条小狗联名上新】LaPeche拉拜诗告白魔方「小方盒」日抛系列彩色隐形眼镜10片装</h4>
+                                <div class="card-text d-flex justify-content-between my-2">
+                                    <span class="text-danger">￥99</span>
+                                    <span>广东广州</span>
+                                </div>
+                                <div class="my-2">
+                                    <a href="#" class="btn btn-outline-warning text-danger disabled"
+                                        style="width: 65px; height: 20px;font-size: 12px;padding: 0;">赠运费险</a>
+                                    <a href="#" class="btn btn-outline-warning text-danger disabled btn-sm">包邮</a>
+                                </div>
+                                <div class="text-muted my-2"> <img src="../作品/image/logo.png" alt="" height="20px">官方旗舰店
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+            </a>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <a href="商品详情.html">
+                    <div class="cardBorder card">
+
+                        <div class="main card-img-top" id="main">
+                            <div class="big card-img-top" id="big">
+                                <img class="card-img-top"
+                                    src="https://images.vsigo.cn/products/caresolution/500-500/20206182163652.jpg">
+                            </div>
+
+
+
+                            <div class="card-body">
+                                <h4 class="card-title my-2">博士伦润明清透fresh隐形眼镜多功能护理液500ml+120ml
+                                    专业配方，杀菌，有效去除蛋白积聚，让镜片每日如新。</h4>
+                                <div class="card-text d-flex justify-content-between my-2">
+                                    <span class="text-danger">￥59</span>
+                                    <span>广东广州</span>
+                                </div>
+                                <div class="my-2">
+                                    <a href="#" class="btn btn-outline-warning text-danger disabled"
+                                        style="width: 65px; height: 20px;font-size: 12px;padding: 0;">赠运费险</a>
+                                    <a href="#" class="btn btn-outline-warning text-danger disabled btn-sm">包邮</a>
+                                </div>
+                                <div class="text-muted my-2"> <img src="../作品/image/logo.png" alt="" height="20px">官方旗舰店
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+            </a>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <a href="商品详情.html">
+                    <div class="cardBorder card">
+
+                        <div class="main card-img-top" id="main">
+                            <div class="big card-img-top" id="big">
+                                <img class="card-img-top"
+                                    src="https://pic8.vsigo.cn/Products/contacts/210-210/202352617436722.jpg"
+                                    alt="Card image">
+
+                            </div>
+
+
+
+                            <div class="card-body">
+                                <h4 class="card-title my-2">【线条小狗联名上新】LaPeche拉拜诗告白魔方「小方盒」日抛系列彩色隐形眼镜10片装</h4>
+                                <div class="card-text d-flex justify-content-between my-2">
+                                    <span class="text-danger">￥99</span>
+                                    <span>广东广州</span>
+                                </div>
+                                <div class="my-2">
+                                    <a href="#" class="btn btn-outline-warning text-danger disabled"
+                                        style="width: 65px; height: 20px;font-size: 12px;padding: 0;">赠运费险</a>
+                                    <a href="#" class="btn btn-outline-warning text-danger disabled btn-sm">包邮</a>
+                                </div>
+                                <div class="text-muted my-2"> <img src="../作品/image/logo.png" alt="" height="20px">官方旗舰店
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+
+        </div>
+        </a>
+        <div class="row my-3">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="cardBorder card">
+                    <div class="main card-img-top" id="main">
+                        <a href="">
+                            <div class="big card-img-top" id="big">
+
+                                <img class="card-img-top"
+                                    src="https://images.vsigo.cn/products/sunglass/500-500/20221115174018694.jpg">
+                            </div>
+                        </a>
+                        <div class="card-body">
+                            <h4 class="card-title my-2">暴龙太阳镜 BL6102【王俊凯联名款】彩色太阳镜</h4>
+                            <div class="card-text d-flex justify-content-between my-2">
+                                <span class="text-danger">￥609</span>
+                                <span>广东广州</span>
+                            </div>
+                            <div class="my-2">
+                                <a href="#" class="btn btn-outline-warning text-danger disabled"
+                                    style="width: 65px; height: 20px;font-size: 12px;padding: 0;">赠运费险</a>
+                                <a href="#" class="btn btn-outline-warning text-danger disabled btn-sm">包邮</a>
+                            </div>
+                            <div class="text-muted my-2"> <img src="../作品/image/logo.png" alt="" height="20px">官方旗舰店
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="cardBorder card">
+                    <div class="main card-img-top" id="main">
+                        <a href="">
+                            <div class="big card-img-top" id="big">
+
+                                <img class="card-img-top"
+                                    src="https://images.vsigo.cn/products/caresolution/500-500/2020618212257838.jpg">
+                            </div>
+                        </a>
+                        <div class="card-body">
+                            <h4 class="card-title my-2">博士伦博乐纯隐形眼镜多功能护理液300ml+60ml模拟健康泪液 温和舒适</h4>
+                            <div class="card-text d-flex justify-content-between my-2">
+                                <span class="text-danger">￥69</span>
+                                <span>广东广州</span>
+                            </div>
+                            <div class="my-2">
+                                <a href="#" class="btn btn-outline-warning text-danger disabled"
+                                    style="width: 65px; height: 20px;font-size: 12px;padding: 0;">赠运费险</a>
+                                <a href="#" class="btn btn-outline-warning text-danger disabled btn-sm">包邮</a>
+                            </div>
+                            <div class="text-muted my-2"> <img src="../作品/image/logo.png" alt="" height="20px">官方旗舰店
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="cardBorder card">
+                    <div class="main card-img-top" id="main">
+                        <a href="">
+                            <div class="big card-img-top" id="big">
+
+                                <img class="card-img-top"
+                                    src="https://images.vsigo.cn/products/contacts/500-500/202387185843786.jpg">
+                            </div>
+                        </a>
+
+                        <div class="card-body">
+
+                            <h4 class="card-title my-2">LaPeche拉拜诗「大艺术家」系列彩色隐形眼镜半年抛1片装-月光舞曲【水光甜酷小黑环】
+                                上新~魔法黑镜&甜心特工！</h4>
+                            <div class="card-text d-flex justify-content-between my-2">
+                                <span class="text-danger">￥99</span>
+                                <span>广东广州</span>
+                            </div>
+                            <div class="my-2">
+                                <a href="#" class="btn btn-outline-warning text-danger disabled"
+                                    style="width: 65px; height: 20px;font-size: 12px;padding: 0;">赠运费险</a>
+                                <a href="#" class="btn btn-outline-warning text-danger disabled btn-sm">包邮</a>
+                            </div>
+                            <div class="text-muted my-2"> <img src="../作品/image/logo.png" alt="" height="20px">官方旗舰店
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="cardBorder card">
+                    <div class="main card-img-top" id="main">
+                        <a href="">
+                            <div class="big card-img-top" id="big">
+
+                                <img class="card-img-top"
+                                    src="https://images.vsigo.cn/products/contacts/500-500/202369103929519.jpg">
+                            </div>
+                        </a>
+                        <span class="miaoshu text-body">月抛</span>
+                        <span class="miaoshu text-body">13.4</span>
+                        <div class="card-body">
+                            <h4 class="card-title text-body">【透氧再升级】Miacare美若康绽美硅水凝胶彩色隐形眼镜月抛1片装-【热卖TOP 1】辻花黑【甜心白开水】
+                                又来了又来了，真·硅水凝胶水光瞳！193Dk/t高透氧量！ </h4>
+                            <div class="card-text d-flex justify-content-between my-2">
+                                <span class="text-danger">￥99</span>
+                                <span>广东广州</span>
+                            </div>
+                            <div class="my-2">
+                                <a href="#" class="btn btn-outline-warning text-danger disabled"
+                                    style="width: 65px; height: 20px;font-size: 12px;padding: 0;">赠运费险</a>
+                                <a href="#" class="btn btn-outline-warning text-danger disabled btn-sm">包邮</a>
+                            </div>
+                            <div class="text-muted my-2"> <img src="../作品/image/logo.png" alt="" height="20px">官方旗舰店
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 模态框 -->
+        <div class="modal" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- 模态框头部 -->
+                    <!-- 模态框内容 -->
+                    <div class="modal-body">
+                        <section>
+                            <!-- 背景颜色 -->
+                            <div class="color"></div>
+                            <div class="color"></div>
+                            <div class="color"></div>
+                            <div class="box">
+                                <!-- 背景圆 -->
+                                <div class="circle" style="--x:0"></div>
+                                <div class="circle" style="--x:1"></div>
+                                <div class="circle" style="--x:2"></div>
+                                <div class="circle" style="--x:3"></div>
+                                <div class="circle" style="--x:4"></div>
+                                <!-- 注册框 -->
+                                <div class="container">
+                                    <div class="form">
+                                        <h2>登录</h2>
+                                        <form>
+                                            <div class="inputBox">
+                                                <input id="user" type="text" placeholder="用户名">
+
+                                            </div>
+                                            <div class="inputBox">
+                                                <input id="password" type="password" placeholder="密码">
+
+                                            </div>
+                                            <div class="inputBox">
+                                                <div class="gcode">验证码位置</div>
+                                                <input id="usercode" type="password" placeholder="验证码">
+                                                <button id="cbt">验证</button>
+
+                                            </div>
+                                            <div class="inputBox">
+                                                <a href="主页.html"> <input id="reg" type="submit" value="登录"></a>
+                                                <button type="button" class="btn zhuce" data-bs-toggle="modal"
+                                                    data-bs-target="#myModal1">
+                                                    注册
+                                                </button>
+
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <!-- 模态框底部 -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">关闭</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="myModal1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- 模态框头部 -->
+                    <!-- 模态框内容 -->
+                    <div class="modal-body">
+                        <section>
+                            <!-- 背景颜色 -->
+                            <div class="color"></div>
+                            <div class="color"></div>
+                            <div class="color"></div>
+                            <div class="box">
+                                <!-- 背景圆 -->
+                                <div class="circle" style="--x:0"></div>
+                                <div class="circle" style="--x:1"></div>
+                                <div class="circle" style="--x:2"></div>
+                                <div class="circle" style="--x:3"></div>
+                                <div class="circle" style="--x:4"></div>
+                                <!-- 注册框 -->
+                                <div class="container">
+                                    <div class="form">
+                                        <h2>注册</h2>
+                                        <form id="form">
+                                            <div class="inputBox">
+                                                <input id="user1" type="text" placeholder="用户名-只支持数字-至少八位">
+
+                                            </div>
+                                            <div class="inputBox">
+                                                <input id="password2" type="password" placeholder="密码-只支持数字,字母-至少八位">
+
+                                            </div>
+                                            <div class="inputBox">
+                                                <input id="password1" type="password" placeholder="请再次输入密码">
+                                                <div id="msg1" style="color:red;"></div>
+
+                                            </div>
+                                            <div class="inputBox">
+                                                <input id="phone1" type="text" placeholder="请输入手机号码:">
+
+                                            </div>
+                                            <div class="inputBox">
+                                                <input id="regu1" type="text" placeholder="请输入邮箱:">
+
+                                            </div>
+                                            <div class="sex">
+                                                请选择您的性别:
+                                                <input id="man1" type="radio" checked="checked" name="sex">男
+                                                <input id="woman1" type="radio" name="sex">女
+                                            </div>
+                                            <div class="inputBox">
+                                                <input id="reg1" type="submit" value="注册">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <!-- 模态框底部 -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">关闭</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 底部导航栏 -->
+        <div class="row">
+            <div class="dibudaohanglan">
+                <footer>
+                    <div class="footer-nav">
+                        <ul>
+                            <li><a href="">首页</a></li>
+                            <li><a href="">关于我们</a></li>
+                            <li><a href="">联系我们</a></li>
+                            <li><a href="">服务</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-info">
+                        <p>© 2024 gdsldlzhanghua</p>
+                        <p><a href="">隐私政策</a> | <a href="">使用条款</a> | <a href="">常见问题</a></p>
+                    </div>
+                    <div class="footer-social">
+                        <ul>
+                            <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                            <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact">
+                        <p>联系我：3064009495@qq.com</p>
+                        <p>电话：123-456-7890</p>
+                    </div>
+                    <div class="footer-back-to-top">
+                        <a href="#top">返回顶部</a>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <script>
+        var ecbt = document.querySelector('#cbt');
+        var egcode = document.querySelector('.gcode');
+        var usercode = document.querySelector('#usercode');
+        var getcode = function () {
+            //Math.random()生成0~1的随机数,小数点在16或17之间
+            //toString(36)转为36进制,36进制包含所以数字和字母
+            //substr(3, 5)从第三位截取往后五位,因为前两位是0
+            var code = Math.random().toString(36).substr(3, 4);
+            return code;
+        }
+
+
+        egcode.onclick = function () {
+            egcode.innerHTML = getcode();
+        }
+        egcode.click();
+        var parent = document.querySelector('form');
+
+        //进行注册
+        var reg = document.querySelector('#reg');
+        //判断验证码是否正确
+        ecbt.onclick = function () {
+            if (egcode.innerHTML == usercode.value) {
+                var a = confirm('验证码正确');
+                if (a == true) {
+                    //验证码正确删除验证码节点
+
+                    parent.removeChild(parent.children[2]);
+
+                }
+
+                return false;
+            } else {
+                alert('验证码错误');
+                return false;
+            }
+
+        }
+        //使用正则表达式检验注册的账号密码等是否符合要求
+        var users = /^[0-9]{8,}$/;
+        var passwords = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,}$/;
+
+        reg.onclick = function () {
+            var user = document.querySelector('#user').value;
+            var password = document.querySelector('#password').value;
+
+            if (users.test(user)) {
+
+            } else {
+                alert('账号不符合要求');
+                return false;
+            }
+            if (passwords.test(password)) {
+                if (password != password1) {//判断两次输入的值是否一致，不一致则显示错误信息
+                    document.getElementById("msg").innerHTML = "两次输入密码不一致，请重新输入";//在div显示错误信息
+                    return false;
+                } else {
+                    //密码一致，可以继续下一步操作
+                    document.getElementById("msg").innerHTML = "";
+
+                }
+            } else {
+                alert('密码不符合要求');
+                return false;
+            }
+            if ((users.test(user)) && (passwords.test(password))) {
+                alert('登录成功');
+            }
+        }
+
+
+        var ecbt1 = document.querySelector('#cbt1');
+        var usercode1 = document.querySelector('#usercode1');
+        //进行注册
+        var reg1 = document.querySelector('#reg1');
+
+        //使用正则表达式检验注册的账号密码等是否符合要求
+        var users1 = /^[0-9]{8,}$/;
+        var passwords1 = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,}$/;
+        var phones1 = /^[0-9]{11}$/;
+        var regus1 = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(.[a-zA-Z0-9_-]+)+$/;
+
+        reg1.onclick = function () {
+            var user1 = document.querySelector('#user1').value;
+            var password2 = document.querySelector('#password2').value;
+            var password1 = document.querySelector('#password1').value;
+            var phone1 = document.querySelector('#phone1').value;
+            var regu1 = document.querySelector('#regu1').value;
+
+
+            if (users1.test(user1)) {
+
+            } else {
+                alert('账号不符合要求');
+                return false;
+            }
+            if (passwords1.test(password2)) {
+                if (password2 != password1) {//判断两次输入的值是否一致，不一致则显示错误信息
+                    document.getElementById("msg1").innerHTML = "两次输入密码不一致，请重新输入";//在div显示错误信息
+                    return false;
+                } else {
+                    //密码一致，可以继续下一步操作
+                    document.getElementById("msg1").innerHTML = "";
+
+                }
+            } else {
+                alert('密码不符合要求');
+                return false;
+            }
+            if (phones1.test(phone1)) {
+
+
+            } else {
+                alert('号码不符合要求');
+                return false;
+
+            }
+            if (regus1.test(regu1)) {
+
+
+            } else {
+                alert('邮箱不符合要求');
+                return false;
+
+            }
+            if ((users1.test(user1)) && (passwords1.test(password2)) && (regus1.test(regu1)) &&
+                (phones1.test(phone1)) && (password2 = password1)) {
+                alert('注册成功');
+            }
+        }
+
+    </script>
+</body>
+
+</html>

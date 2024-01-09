@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美瞳页面</title>
+    <link rel="stylesheet" href="../bootstrap-5.1.3-dist/css/bootstrap.min.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <script src="../bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/登录页面.css">
+    <link rel="stylesheet" href="css/主页.css">
+</head>
+<style>
+    a {
+        list-style: none;
+        text-decoration: none;
+    }
+
+    .head {
+        height: 60px;
+    }
+
+    a:hover {
+        background-color: darkgrey;
+    }
+
+    .aa {
+        color: rgb(113, 169, 80);
+    }
+
+    .miaoshu {
+        border: 1px solid rgb(240, 166, 8);
+        border-radius: 8px;
+
+    }
+
+    .gouwuche {
+        margin-left: 100px;
+    }
+
+    .cardBorder {
+        border: none;
+        border-radius: 20px;
+        margin-top: 50px;
+    }
+
+    .card {
+        border-radius: 20px;
+    }
+
+    .cardBorder.card:hover {
+
+        border: 1px solid rgb(240, 93, 8);
+
+    }
+
+    .card-img-top {
+        border-radius: 20px;
+    }
+
+    .card-title {
+        text-overflow: -o-ellipsis-lastline;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
+    a {
+        text-decoration: none;
+        list-style: none;
+    }
+
+    .dibudaohanglan {
+        background-color: darkgrey;
+        height: 300px;
+        border-top-left-radius: 20px;
+        /* 左上角 */
+        border-top-right-radius: 20px;
+        /* 右上角 */
+        margin-top: 50px;
+    }
+
+    /* 底部整体样式 */
+    footer {
+        padding: 20px;
+        text-align: center;
+    }
+
+    /* 导航链接样式 */
+    .footer-nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .footer-nav ul li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .footer-nav ul li a {
+        text-decoration: none;
+        color: #333;
+    }
+
+    /* 版权信息样式 */
+    .footer-info {
+        margin: 10px 0;
+    }
+
+    .footer-info p {
+        font-size: 12px;
+        color: #333;
+    }
+
+    /* 社交媒体链接样式 */
+    .footer-social ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .footer-social ul li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .footer-social ul li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 18px;
+    }
+
+    /* 联系信息样式 */
+    .footer-contact p {
+        font-size: 12px;
+
+        margin: 5px 0;
+    }
+
+    /* 返回顶部按钮样式 */
+    .footer-back-to-top a {
+        text-decoration: none;
+        color: #333;
+        font-size: 12px;
+    }
+
+    .footer-back-to-top a:hover {
+        text-decoration: underline;
+    }
+
+    html {
+        font-size: 16px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <nav class="navbar navbar-dark bg-dark fixed-top">
+                <div class="container-fluid">
+                    <li class="navbar-brand" href="#">好的眼镜没那么贵!~</li>
+                    <li><img class="logo" src="image/logo.png" alt="" height="38px"></li>
+                    <li><a class="active text-white navbar-brand" aria-current="page" href="主页.html">主页 </a></li>
+                    <li class="nav-item">
+                        <a class="text-white navbar-brand navbar-brand" href="#">企业采购</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="text-white navbar-brand" href="#">下载APP</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="dropdown-toggle text-white navbar-brand" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-person-circle" viewBox="0 0 16 16">
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                <path fill-rule="evenodd"
+                                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                            </svg>
+                            我的
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li style="padding: .25rem 1rem;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="currentColor" class="bi bi-person-fill-add" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5a.5.5 0 0 0-1 0v1h-1a.5.5 0 0 0 0 1h1v1a.5.5 0 0 0 1 0v-1h1a.5.5 0 0 0 0-1h-1v-1Z" />
+                                    <path
+                                        d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-9 8c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4Z" />
+                                </svg><button type="button" class="btn" data-bs-toggle="modal"
+                                    data-bs-target="#myModal">
+                                    登录
+                                </button>
+                            </li>
+                            <li><a class="dropdown-item text-body" href="个人订单.html"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-menu-button-wide-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M1.5 0A1.5 1.5 0 0 0 0 1.5v2A1.5 1.5 0 0 0 1.5 5h13A1.5 1.5 0 0 0 16 3.5v-2A1.5 1.5 0 0 0 14.5 0h-13zm1 2h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1 0-1zm9.927.427A.25.25 0 0 1 12.604 2h.792a.25.25 0 0 1 .177.427l-.396.396a.25.25 0 0 1-.354 0l-.396-.396zM0 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V8zm1 3v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2H1zm14-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2h14zM2 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z" />
+                                    </svg> 我的订单</a></li>
+                            <li><a class="dropdown-item text-body" href="购物车.html"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-cart3" viewBox="0 0 16 16">
+                                        <path
+                                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                    </svg> 购物车</a></li>
+                        </ul>
+                    </li>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" fill="currentColor" class="bi bi-search-heart"
+                                viewBox="0 0 16 16">
+                                <path d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018Z" />
+                                <path
+                                    d="M13 6.5a6.471 6.471 0 0 1-1.258 3.844c.04.03.078.062.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1.007 1.007 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5ZM6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Z" />
+                            </svg></button>
+                    </form>
+
+                </div>
+                <span>
+                    <span class="dropdown">
+                        <button class="btn btn-secondary aa" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            综合
+                        </button>
+                    </span>
+                    <span class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            抛弃周期
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">日抛</a></li>
+                            <li><a class="dropdown-item" href="#">月抛</a></li>
+                            <li><a class="dropdown-item" href="#">半年抛</a></li>
+                            <li><a class="dropdown-item" href="#">年抛</a></li>
+                            <li><a class="dropdown-item" href="#">双周抛</a></li>
+                            <li><a class="dropdown-item" href="#">季抛</a></li>
+                        </ul>
+                    </span>
+                    <span class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            直径(mm)
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">0.0</a></li>
+                            <li><a class="dropdown-item" href="#">13.8</a></li>
+                            <li><a class="dropdown-item" href="#">14.0</a></li>
+                            <li><a class="dropdown-item" href="#">14.1</a></li>
+                            <li><a class="dropdown-item" href="#">14.2</a></li>
+                            <li><a class="dropdown-item" href="#">14.3</a></li>
+                        </ul>
+                    </span>
+                </span>
+            </nav>
+            <nav class="navbar bg-body-tertiary bg-dark active">
+                <div class="container-fluid">
+                    <span> <a href="../作品/主页.html" class="navbar-brand text-white">主页</a>
+                    </span>
+                    <span>
+                        <img src="../作品/image/logo.png" alt="" height="30px">
+                    </span>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" fill="currentColor" class="bi bi-search-heart"
+                                viewBox="0 0 16 16">
+                                <path d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018Z" />
+                                <path
+                                    d="M13 6.5a6.471 6.471 0 0 1-1.258 3.844c.04.03.078.062.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1.007 1.007 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5ZM6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Z" />
+                            </svg></button>
+                    </form>
+
+                </div>
+                <span>
+                    <span class="dropdown">
+                        <button class="btn btn-secondary aa" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            综合
+                        </button>
+                    </span>
+                    <span class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            抛弃周期
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">日抛</a></li>
+                            <li><a class="dropdown-item" href="#">月抛</a></li>
+                            <li><a class="dropdown-item" href="#">半年抛</a></li>
+                            <li><a class="dropdown-item" href="#">年抛</a></li>
+                            <li><a class="dropdown-item" href="#">双周抛</a></li>
+                            <li><a class="dropdown-item" href="#">季抛</a></li>
+                        </ul>
+                    </span>
+                    <span class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            直径(mm)
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">0.0</a></li>
+                            <li><a class="dropdown-item" href="#">13.8</a></li>
+                            <li><a class="dropdown-item" href="#">14.0</a></li>
+                            <li><a class="dropdown-item" href="#">14.1</a></li>
+                            <li><a class="dropdown-item" href="#">14.2</a></li>
+                            <li><a class="dropdown-item" href="#">14.3</a></li>
+                        </ul>
+                    </span>
+                </span>
+            </nav>
+        </div>
+
+        <div class="row my-3">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="cardBorder card">
+                    <div class="main card-img-top" id="main">
+                        <a href="">
+                            <div class="big card-img-top" id="big">
+                                <a href="商品详情.html">
+                                    <img class="card-img-top"
+                                        src="https://images.vsigo.cn/products/contacts/500-500/202387185843786.jpg"></a>
+                            </div>
+                        </a>
+                        <span class="miaoshu text-body">月抛</span>
+                        <span class="miaoshu text-body">14.1</span>
+                        <div class="card-body">
+                            <h4 class="card-title text-body">LaPeche拉拜诗「大艺术家」系列彩色隐形眼镜半年抛1片装-月光舞曲【水光甜酷小黑环】
+                                上新~魔法黑镜&甜心特工！</h4>
+                            <div class="card-text d-flex justify-content-between hover">
+                                <span class="text-danger">￥99</span>
+                                <span class="gouwuche"><a href="#" class="text-body"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-cart-plus text-body" viewBox="0 0 16 16">
+                                            <path
+                                                d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
+                                            <path
+                                                d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                                        </svg>加入购物车</a></span>
+
+                                <span><a class="text-body" href="">购买</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="cardBorder card">
+                    <div class="main card-img-top" id="main">
+                        <a href="">
+                            <div class="big card-img-top" id="big">
+                                <a href="商品详情.html">
+                                    <img class="card-img-top"
+                                        src="https://images.vsigo.cn/products/contacts/500-500/202384104825753.jpg"></a>
+                            </div>
+                        </a>
+                        <span class="miaoshu text-body">日抛</span>
+                        <span class="miaoshu text-body">13.5</span>
+                        <div class="card-body">
+                            <h4 class="card-title text-body">【2色上线】人鱼姬金粉大师彩色隐形眼镜日抛10片装-【永远爆款】 星落奶灰【可盐可甜 自带打光灯】
+                                两款花色惊喜上新！超值价格来袭！全新雾化金粉设计，春日温柔系小心机！</h4>
+                            <div class="card-text d-flex justify-content-between hover">
+                                <span class="text-danger">￥99</span>
+                                <span class="gouwuche"><a href="#" class="text-body"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-cart-plus text-body" viewBox="0 0 16 16">
+                                            <path
+                                                d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
+                                            <path
+                                                d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                                        </svg>加入购物车</a></span>
+
+                                <span><a class="text-body" href="">购买</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="cardBorder card">
+                    <div class="main card-img-top" id="main">
+                        <a href="">
+                            <div class="big card-img-top" id="big">
+                                <a href="商品详情.html">
+                                    <img class="card-img-top"
+                                        src="https://images.vsigo.cn/products/contacts/500-500/202369103929519.jpg"></a>
+                            </div>
+                        </a>
+                        <span class="miaoshu text-body">月抛</span>
+                        <span class="miaoshu text-body">13.4</span>
+                        <div class="card-body">
+                            <h4 class="card-title text-body">【透氧再升级】Miacare美若康绽美硅水凝胶彩色隐形眼镜月抛1片装-【热卖TOP 1】辻花黑【甜心白开水】
+                                又来了又来了，真·硅水凝胶水光瞳！193Dk/t高透氧量！ </h4>
+                            <div class="card-text d-flex justify-content-between hover">
+                                <span class="text-danger">￥99</span>
+                                <span class="gouwuche"><a href="#" class="text-body"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-cart-plus text-body" viewBox="0 0 16 16">
+                                            <path
+                                                d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
+                                            <path
+                                                d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                                        </svg>加入购物车</a></span>
+
+                                <span><a class="text-body" href="">购买</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="cardBorder card">
+                    <div class="main card-img-top" id="main">
+                        <a href="">
+                            <div class="big card-img-top" id="big">
+                                <a href="商品详情.html">
+                                    <img class="card-img-top"
+                                        src="https://images.vsigo.cn/products/contacts/500-500/202341182252995.jpg"></a>
+                            </div>
+                        </a>
+                        <span class="miaoshu text-body">月抛</span>
+                        <span class="miaoshu text-body">14.0</span>
+                        <div class="card-body">
+                            <h4 class="card-title text-body">LaPeche拉拜诗「花见」系列月抛彩色隐形眼镜1片-窈窕星棕（少女星星眼）
+                                新花色！摩卡棕、慕斯黑、甜妃棕、胧夜黑上新，纯欲、深邃，陪你21天</h4>
+                            <div class="card-text d-flex justify-content-between hover">
+                                <span class="text-danger">￥99</span>
+                                <span class="gouwuche"><a href="#" class="text-body"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-cart-plus text-body" viewBox="0 0 16 16">
+                                            <path
+                                                d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
+                                            <path
+                                                d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                                        </svg>加入购物车</a></span>
+
+                                <span><a class="text-body" href="">购买</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row my-3">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="cardBorder card">
+                        <div class="main card-img-top" id="main">
+                            <a href="">
+                                <div class="big card-img-top" id="big">
+
+                                    <img class="card-img-top"
+                                        src="https://images.vsigo.cn/products/contacts/500-500/202341182252995.jpg">
+                                </div>
+                            </a>
+                            <span class="miaoshu text-body">月抛</span>
+                            <span class="miaoshu text-body">14.0</span>
+                            <div class="card-body">
+                                <h4 class="card-title text-body">LaPeche拉拜诗「花见」系列月抛彩色隐形眼镜1片-窈窕星棕（少女星星眼）
+                                    新花色！摩卡棕、慕斯黑、甜妃棕、胧夜黑上新，纯欲、深邃，陪你21天</h4>
+                                <div class="card-text d-flex justify-content-between hover">
+                                    <span class="text-danger">￥99</span>
+                                    <span class="gouwuche"><a href="#" class="text-body"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-cart-plus text-body"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
+                                                <path
+                                                    d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                                            </svg>加入购物车</a></span>
+
+                                    <span><a class="text-body" href="">购买</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="cardBorder card">
+                        <div class="main card-img-top" id="main">
+                            <a href="">
+                                <div class="big card-img-top" id="big">
+
+                                    <img class="card-img-top"
+                                        src="https://images.vsigo.cn/products/contacts/500-500/202369103929519.jpg">
+                                </div>
+                            </a>
+                            <span class="miaoshu text-body">月抛</span>
+                            <span class="miaoshu text-body">13.4</span>
+                            <div class="card-body">
+                                <h4 class="card-title text-body">【透氧再升级】Miacare美若康绽美硅水凝胶彩色隐形眼镜月抛1片装-【热卖TOP 1】辻花黑【甜心白开水】
+                                    又来了又来了，真·硅水凝胶水光瞳！193Dk/t高透氧量！ </h4>
+                                <div class="card-text d-flex justify-content-between hover">
+                                    <span class="text-danger">￥99</span>
+                                    <span class="gouwuche"><a href="#" class="text-body"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-cart-plus text-body"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
+                                                <path
+                                                    d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                                            </svg>加入购物车</a></span>
+
+                                    <span><a class="text-body" href="">购买</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="cardBorder card">
+                        <div class="main card-img-top" id="main">
+                            <a href="">
+                                <div class="big card-img-top" id="big">
+
+                                    <img class="card-img-top"
+                                        src="https://images.vsigo.cn/products/contacts/500-500/202384104825753.jpg">
+                                </div>
+                            </a>
+                            <span class="miaoshu text-body">日抛</span>
+                            <span class="miaoshu text-body">13.5</span>
+                            <div class="card-body">
+                                <h4 class="card-title text-body">【2色上线】人鱼姬金粉大师彩色隐形眼镜日抛10片装-【永远爆款】 星落奶灰【可盐可甜 自带打光灯】
+                                    两款花色惊喜上新！超值价格来袭！全新雾化金粉设计，春日温柔系小心机！</h4>
+                                <div class="card-text d-flex justify-content-between hover">
+                                    <span class="text-danger">￥99</span>
+                                    <span class="gouwuche"><a href="#" class="text-body"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-cart-plus text-body"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
+                                                <path
+                                                    d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                                            </svg>加入购物车</a></span>
+
+                                    <span><a class="text-body" href="">购买</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="cardBorder card">
+                        <div class="main card-img-top" id="main">
+                            <a href="">
+                                <div class="big card-img-top" id="big">
+
+                                    <img class="card-img-top"
+                                        src="https://images.vsigo.cn/products/contacts/500-500/202387185843786.jpg">
+                                </div>
+                            </a>
+                            <span class="miaoshu text-body">月抛</span>
+                            <span class="miaoshu text-body">14.1</span>
+                            <div class="card-body">
+                                <h4 class="card-title text-body">LaPeche拉拜诗「大艺术家」系列彩色隐形眼镜半年抛1片装-月光舞曲【水光甜酷小黑环】
+                                    上新~魔法黑镜&甜心特工！</h4>
+                                <div class="card-text d-flex justify-content-between hover">
+                                    <span class="text-danger">￥99</span>
+                                    <span class="gouwuche"><a href="#" class="text-body"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-cart-plus text-body"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
+                                                <path
+                                                    d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                                            </svg>加入购物车</a></span>
+
+                                    <span><a class="text-body" href="">购买</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row my-3">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="cardBorder card">
+                        <div class="main card-img-top" id="main">
+                            <a href="">
+                                <div class="big card-img-top" id="big">
+
+                                    <img class="card-img-top"
+                                        src="https://images.vsigo.cn/products/contacts/500-500/202384104825753.jpg">
+                                </div>
+                            </a>
+                            <span class="miaoshu text-body">日抛</span>
+                            <span class="miaoshu text-body">13.5</span>
+                            <div class="card-body">
+                                <h4 class="card-title text-body">【2色上线】人鱼姬金粉大师彩色隐形眼镜日抛10片装-【永远爆款】 星落奶灰【可盐可甜 自带打光灯】
+                                    两款花色惊喜上新！超值价格来袭！全新雾化金粉设计，春日温柔系小心机！</h4>
+                                <div class="card-text d-flex justify-content-between hover">
+                                    <span class="text-danger">￥99</span>
+                                    <span class="gouwuche"><a href="#" class="text-body"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-cart-plus text-body"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
+                                                <path
+                                                    d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                                            </svg>加入购物车</a></span>
+
+                                    <span><a class="text-body" href="">购买</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="cardBorder card">
+                        <div class="main card-img-top" id="main">
+                            <a href="">
+                                <div class="big card-img-top" id="big">
+
+                                    <img class="card-img-top"
+                                        src="https://images.vsigo.cn/products/contacts/500-500/202341182252995.jpg">
+                                </div>
+                            </a>
+                            <span class="miaoshu text-body">月抛</span>
+                            <span class="miaoshu text-body">14.0</span>
+                            <div class="card-body">
+                                <h4 class="card-title text-body">LaPeche拉拜诗「花见」系列月抛彩色隐形眼镜1片-窈窕星棕（少女星星眼）
+                                    新花色！摩卡棕、慕斯黑、甜妃棕、胧夜黑上新，纯欲、深邃，陪你21天</h4>
+                                <div class="card-text d-flex justify-content-between hover">
+                                    <span class="text-danger">￥99</span>
+                                    <span class="gouwuche"><a href="#" class="text-body"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-cart-plus text-body"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
+                                                <path
+                                                    d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                                            </svg>加入购物车</a></span>
+
+                                    <span><a class="text-body" href="">购买</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="cardBorder card">
+                        <div class="main card-img-top" id="main">
+                            <a href="">
+                                <div class="big card-img-top" id="big">
+
+                                    <img class="card-img-top"
+                                        src="https://images.vsigo.cn/products/contacts/500-500/202387185843786.jpg">
+                                </div>
+                            </a>
+                            <span class="miaoshu text-body">月抛</span>
+                            <span class="miaoshu text-body">14.1</span>
+                            <div class="card-body">
+                                <h4 class="card-title text-body">LaPeche拉拜诗「大艺术家」系列彩色隐形眼镜半年抛1片装-月光舞曲【水光甜酷小黑环】
+                                    上新~魔法黑镜&甜心特工！</h4>
+                                <div class="card-text d-flex justify-content-between hover">
+                                    <span class="text-danger">￥99</span>
+                                    <span class="gouwuche"><a href="#" class="text-body"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-cart-plus text-body"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
+                                                <path
+                                                    d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                                            </svg>加入购物车</a></span>
+
+                                    <span><a class="text-body" href="">购买</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="cardBorder card">
+                        <div class="main card-img-top" id="main">
+                            <a href="">
+                                <div class="big card-img-top" id="big">
+
+                                    <img class="card-img-top"
+                                        src="https://images.vsigo.cn/products/contacts/500-500/202369103929519.jpg">
+                                </div>
+                            </a>
+                            <span class="miaoshu text-body">月抛</span>
+                            <span class="miaoshu text-body">13.4</span>
+                            <div class="card-body">
+                                <h4 class="card-title text-body">【透氧再升级】Miacare美若康绽美硅水凝胶彩色隐形眼镜月抛1片装-【热卖TOP 1】辻花黑【甜心白开水】
+                                    又来了又来了，真·硅水凝胶水光瞳！193Dk/t高透氧量！ </h4>
+                                <div class="card-text d-flex justify-content-between hover">
+                                    <span class="text-danger">￥99</span>
+                                    <span class="gouwuche"><a href="#" class="text-body"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-cart-plus text-body"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
+                                                <path
+                                                    d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                                            </svg>加入购物车</a></span>
+
+                                    <span><a class="text-body" href="">购买</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- 底部导航栏 -->
+            <div class="row">
+                <div class="dibudaohanglan">
+                    <footer>
+                        <div class="footer-nav">
+                            <ul>
+                                <li><a href="主页.html">首页</a></li>
+                                <li><a href="">关于我们</a></li>
+                                <li><a href="">联系我们</a></li>
+                                <li><a href="">服务</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-info">
+                            <p>© 2024 gdsldlzhanghua</p>
+                            <p><a href="">隐私政策</a> | <a href="">使用条款</a> | <a href="">常见问题</a></p>
+                        </div>
+                        <div class="footer-social">
+                            <ul>
+                                <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-contact">
+                            <p>联系我：3064009495@qq.com</p>
+                            <p>电话：123-456-7890</p>
+                        </div>
+                        <div class="footer-back-to-top">
+                            <a href="#top">返回顶部</a>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+            <!-- 模态框 -->
+            <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <!-- 模态框头部 -->
+                        <!-- 模态框内容 -->
+                        <div class="modal-body">
+                            <section>
+                                <!-- 背景颜色 -->
+                                <div class="color"></div>
+                                <div class="color"></div>
+                                <div class="color"></div>
+                                <div class="box">
+                                    <!-- 背景圆 -->
+                                    <div class="circle" style="--x:0"></div>
+                                    <div class="circle" style="--x:1"></div>
+                                    <div class="circle" style="--x:2"></div>
+                                    <div class="circle" style="--x:3"></div>
+                                    <div class="circle" style="--x:4"></div>
+                                    <!-- 注册框 -->
+                                    <div class="container">
+                                        <div class="form">
+                                            <h2>登录</h2>
+                                            <form>
+                                                <div class="inputBox">
+                                                    <input id="user" type="text" placeholder="用户名">
+
+                                                </div>
+                                                <div class="inputBox">
+                                                    <input id="password" type="password" placeholder="密码">
+
+                                                </div>
+                                                <div class="inputBox">
+                                                    <div class="gcode">验证码位置</div>
+                                                    <input id="usercode" type="password" placeholder="验证码">
+                                                    <button id="cbt">验证</button>
+
+                                                </div>
+                                                <div class="inputBox">
+                                                    <a href="主页.html"> <input id="reg" type="submit" value="登录"></a>
+                                                    <button type="button" class="btn zhuce" data-bs-toggle="modal"
+                                                        data-bs-target="#myModal1">
+                                                        注册
+                                                    </button>
+
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <!-- 模态框底部 -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">关闭</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="myModal1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <!-- 模态框头部 -->
+                        <!-- 模态框内容 -->
+                        <div class="modal-body">
+                            <section>
+                                <!-- 背景颜色 -->
+                                <div class="color"></div>
+                                <div class="color"></div>
+                                <div class="color"></div>
+                                <div class="box">
+                                    <!-- 背景圆 -->
+                                    <div class="circle" style="--x:0"></div>
+                                    <div class="circle" style="--x:1"></div>
+                                    <div class="circle" style="--x:2"></div>
+                                    <div class="circle" style="--x:3"></div>
+                                    <div class="circle" style="--x:4"></div>
+                                    <!-- 注册框 -->
+                                    <div class="container">
+                                        <div class="form">
+                                            <h2>注册</h2>
+                                            <form id="form">
+                                                <div class="inputBox">
+                                                    <input id="user1" type="text" placeholder="用户名-只支持数字-至少八位">
+
+                                                </div>
+                                                <div class="inputBox">
+                                                    <input id="password2" type="password"
+                                                        placeholder="密码-只支持数字,字母-至少八位">
+
+                                                </div>
+                                                <div class="inputBox">
+                                                    <input id="password1" type="password" placeholder="请再次输入密码">
+                                                    <div id="msg1" style="color:red;"></div>
+
+                                                </div>
+                                                <div class="inputBox">
+                                                    <input id="phone1" type="text" placeholder="请输入手机号码:">
+
+                                                </div>
+                                                <div class="inputBox">
+                                                    <input id="regu1" type="text" placeholder="请输入邮箱:">
+
+                                                </div>
+                                                <div class="sex">
+                                                    请选择您的性别:
+                                                    <input id="man1" type="radio" checked="checked" name="sex">男
+                                                    <input id="woman1" type="radio" name="sex">女
+                                                </div>
+                                                <div class="inputBox">
+                                                    <input id="reg1" type="submit" value="注册">
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <!-- 模态框底部 -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">关闭</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

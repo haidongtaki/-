@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="登录页面.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.js"></script>
+
+
+
+
+    <title>登录页面</title>
+</head>
+<style>
+    a {
+        list-style: none;
+        text-decoration: none;
+    }
+
+    .gcode {
+        width: 150px;
+        height: 40px;
+        background: url(login.png);
+        color: rgba(57, 168, 49, 0.825);
+        background-color: aqua;
+        margin-bottom: 5px;
+        text-align: center;
+        /* 字间距 */
+        letter-spacing: 8px;
+        /* 字体为斜体 */
+        font-style: italic;
+        /* 悬停变小手 */
+        cursor: pointer;
+    }
+
+    #cbt {
+        margin-top: 10px;
+        width: 100%;
+        height: 40px;
+        /* 去掉内边距和边框对盒子大小的影响 */
+        box-sizing: border-box;
+    }
+
+    .sex {
+        margin-top: 20px;
+    }
+
+    .form {
+        color: #000;
+    }
+</style>
+
+<body>
+    <section>
+        <!-- 背景颜色 -->
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="box">
+            <!-- 背景圆 -->
+            <div class="circle" style="--x:0"></div>
+            <div class="circle" style="--x:1"></div>
+            <div class="circle" style="--x:2"></div>
+            <div class="circle" style="--x:3"></div>
+            <div class="circle" style="--x:4"></div>
+            <!-- 注册框 -->
+            <div class="container">
+                <div class="form">
+                    <h2>登录</h2>
+                    <form>
+                        <div class="inputBox">
+                            <input id="user" type="text" placeholder="用户名">
+
+                        </div>
+                        <div class="inputBox">
+                            <input id="password" type="password" placeholder="密码">
+
+                        </div>
+                        <div class="inputBox">
+                            <div class="gcode">验证码位置</div>
+                            <input id="usercode" type="password" placeholder="验证码">
+                            <button id="cbt">验证</button>
+
+                        </div>
+                        <div class="inputBox">
+                            <a href=""><input id="reg" type="submit" value="登录"></a>
+                            <a href=""><input id="reg" type="submit" value="注册"></a>
+
+
+
+
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        var ecbt = document.querySelector('#cbt');
+        var egcode = document.querySelector('.gcode');
+        var usercode = document.querySelector('#usercode');
+        var getcode = function () {
+            //Math.random()生成0~1的随机数,小数点在16或17之间
+            //toString(36)转为36进制,36进制包含所以数字和字母
+            //substr(3, 5)从第三位截取往后五位,因为前两位是0
+            var code = Math.random().toString(36).substr(3, 4);
+            return code;
+        }
+
+
+        egcode.onclick = function () {
+            egcode.innerHTML = getcode();
+        }
+        egcode.click();
+        var parent = document.querySelector('form');
+
+        //进行注册
+        var reg = document.querySelector('#reg');
+        //判断验证码是否正确
+        ecbt.onclick = function () {
+            if (egcode.innerHTML == usercode.value) {
+                var a = confirm('验证码正确');
+                if (a == true) {
+                    //验证码正确删除验证码节点
+
+                    parent.removeChild(parent.children[2]);
+
+                }
+
+                return false;
+            } else {
+                alert('验证码错误');
+                return false;
+            }
+
+        }
+        //使用正则表达式检验注册的账号密码等是否符合要求
+        var users = /^[0-9]{8,}$/;
+        var passwords = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,}$/;
+
+        reg.onclick = function () {
+            var user = document.querySelector('#user').value;
+            var password = document.querySelector('#password').value;
+
+            if (users.test(user)) {
+
+            } else {
+                alert('账号不符合要求');
+                return false;
+            }
+            if (passwords.test(password)) {
+                if (password != password1) {//判断两次输入的值是否一致，不一致则显示错误信息
+                    document.getElementById("msg").innerHTML = "两次输入密码不一致，请重新输入";//在div显示错误信息
+                    return false;
+                } else {
+                    //密码一致，可以继续下一步操作
+                    document.getElementById("msg").innerHTML = "";
+
+                }
+            } else {
+                alert('密码不符合要求');
+                return false;
+            }
+
+
+            if ((users.test(user)) && (passwords.test(password))) {
+                alert('登录成功');
+
+            }
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>

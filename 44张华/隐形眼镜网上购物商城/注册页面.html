@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <link rel="stylesheet" href="css/注册页面.css">
+    <title>注册页面</title>
+</head>
+<style>
+    .gcode {
+        width: 150px;
+        height: 40px;
+        background: url(login.png);
+        color: rgba(57, 168, 49, 0.825);
+        background-color: aqua;
+        margin-bottom: 5px;
+        text-align: center;
+        /* 字间距 */
+        letter-spacing: 8px;
+        /* 字体为斜体 */
+        font-style: italic;
+        /* 悬停变小手 */
+        cursor: pointer;
+    }
+
+    #cbt1 {
+        margin-top: 10px;
+        width: 100%;
+        height: 40px;
+        /* 去掉内边距和边框对盒子大小的影响 */
+        box-sizing: border-box;
+    }
+
+    .sex {
+        margin-top: 20px;
+    }
+</style>
+
+<body>
+    <section>
+        <!-- 背景颜色 -->
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="box">
+            <!-- 背景圆 -->
+            <div class="circle" style="--x:0"></div>
+            <div class="circle" style="--x:1"></div>
+            <div class="circle" style="--x:2"></div>
+            <div class="circle" style="--x:3"></div>
+            <div class="circle" style="--x:4"></div>
+            <!-- 注册框 -->
+            <div class="container">
+                <div class="form">
+                    <h2>注册</h2>
+                    <form id="form">
+                        <div class="inputBox">
+                            <input id="user1" type="text" placeholder="用户名--只支持数字--至少八位">
+
+                        </div>
+                        <div class="inputBox">
+                            <input id="password2" type="password" placeholder="密码--只支持数字,字母--至少八位">
+
+                        </div>
+                        <div class="inputBox">
+                            <input id="password1" type="password" placeholder="请再次输入密码">
+                            <div id="msg1" style="color:red;"></div>
+
+                        </div>
+                        <div class="inputBox">
+                            <input id="phone1" type="text" placeholder="请输入手机号码:">
+
+                        </div>
+                        <div class="inputBox">
+                            <input id="regu1" type="text" placeholder="请输入邮箱:">
+
+                        </div>
+                        <div class="sex">
+                            请选择您的性别:
+                            <input id="man1" type="radio" checked="checked" name="sex">男
+                            <input id="woman1" type="radio" name="sex">女
+                        </div>
+                        <div class="inputBox">
+                            <input id="reg1" type="submit" value="注册">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        var ecbt1 = document.querySelector('#cbt1');
+        var usercode1 = document.querySelector('#usercode1');
+        //进行注册
+        var reg1 = document.querySelector('#reg1');
+
+        //使用正则表达式检验注册的账号密码等是否符合要求
+        var users1 = /^[0-9]{8,}$/;
+        var passwords1 = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,}$/;
+        var phones1 = /^[0-9]{11}$/;
+        var regus1 = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(.[a-zA-Z0-9_-]+)+$/;
+
+        reg1.onclick = function () {
+            var user1 = document.querySelector('#user1').value;
+            var password2 = document.querySelector('#password2').value;
+            var password1 = document.querySelector('#password1').value;
+            var phone1 = document.querySelector('#phone1').value;
+            var regu1 = document.querySelector('#regu1').value;
+
+
+            if (users1.test(user1)) {
+
+            } else {
+                alert('账号不符合要求');
+                return false;
+            }
+            if (passwords1.test(password2)) {
+                if (password2 != password1) {//判断两次输入的值是否一致，不一致则显示错误信息
+                    document.getElementById("msg1").innerHTML = "两次输入密码不一致，请重新输入";//在div显示错误信息
+                    return false;
+                } else {
+                    //密码一致，可以继续下一步操作
+                    document.getElementById("msg1").innerHTML = "";
+
+                }
+            } else {
+                alert('密码不符合要求');
+                return false;
+            }
+            if (phones1.test(phone1)) {
+
+
+            } else {
+                alert('号码不符合要求');
+                return false;
+
+            }
+            if (regus1.test(regu1)) {
+
+
+            } else {
+                alert('邮箱不符合要求');
+                return false;
+
+            }
+            if ((users1.test(user1)) && (passwords1.test(password2)) && (regus1.test(regu1)) &&
+                (phones1.test(phone1)) && (password2 = password1)) {
+                alert('注册成功');
+            }
+        }
+    </script>
+</body>
+
+</html>
